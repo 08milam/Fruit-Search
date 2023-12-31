@@ -1,8 +1,7 @@
-
 // title: autocomplete.js
 // type: js
 // creation date: 11/7/2023
-// modification date: date:12/12/23
+// modification date: date:12/30/23
 // note: 
 // programmer: Matthew Milam
 
@@ -10,7 +9,7 @@ const input = document.querySelector("#fruit");
 const suggestions = document.querySelector(".suggestions ul");
 
 const fruit = [
-  "apple",
+  "Apple",
   "Apricot",
   "Avocado",
   "Banana",
@@ -113,8 +112,12 @@ input.addEventListener("input", (e) => {
     for (let i = 0; i < autocomplete.length; i++) {
       let answer = autocomplete[i];
       let useSuggestion = document.createElement("li");
+      useSuggestion.addEventListener('click', function(e){
+        const selectItem = e.target;
+       clickautofill = selectItem.innerText;
+       input.value = clickautofill;
+      });
       useSuggestion.innerText = answer;
-
       suggestions.appendChild(useSuggestion);
     }
   }
