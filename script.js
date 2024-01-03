@@ -105,14 +105,17 @@ input.addEventListener("input", (e) => {
   suggestions.replaceChildren();
     let autocomplete = [];
     let inputbox = input.value;
+    //make a filter for input and convert all to lower case
   if (inputbox) {
     autocomplete = fruit.filter(function (keyword) {
       return keyword.toLowerCase().includes(inputbox.toLowerCase());
     });
-
+// loops over the list and gets to value
     for (let i = 0; i < autocomplete.length; i++) {
       let answer = autocomplete[i];
+  //create the li
       let useSuggestion = document.createElement("li");
+  //targets the click itme
       useSuggestion.addEventListener('click', function(e){
         const selectItem = e.target;
        clickautofill = selectItem.innerText;
