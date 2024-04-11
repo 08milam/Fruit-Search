@@ -1,0 +1,103 @@
+/* 
+title: autocomplete.css
+type: css
+creation date:11/7/2023
+modification date:12/12/23
+note: 
+programmer: Matthew Milam 
+*/
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  background: rgb(2,0,36);
+  background: linear-gradient(120deg, rgba(2,0,36,1) 0%, rgba(233,237,22,1) 0%, rgba(237,28,22,1) 100%);
+  background: rgb(2,0,36);
+  background: linear-gradient(120deg, rgba(2,0,36,1) 0%, rgba(0,150,255,1) 0%, rgba(141,0,167,1) 76%);
+}
+
+.navbar{
+  top: 15px;
+  position: fixed;
+  word-spacing: 5px;
+  font-size: 2rem;
+}
+.navbar-link{
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.fruitsearch{
+  font-weight: 1500;
+  font-size: 50px;
+  color: lightgray;
+}
+
+input {
+  width: 450px;
+  height: 2em;
+  border:  transparent;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 1px;
+  box-shadow: 0 0 5px black;
+  transition: .4s;
+  backdrop-filter: blur(10px);
+  background-color: rgba(225,225,225, 0.1);
+  font-size: 35px;
+  color: whitesmoke;
+}
+
+input:hover {
+  width: 450px;
+  height: 2.01em;
+  backdrop-filter: blur(10px);
+  background-color: rgba(225,225,225, 0.2);
+  transition: .6s;
+  box-shadow: 0 0 15px black;
+}
+
+input:focus {
+  height: 2.01em;
+  border: none;
+  outline: none;
+  background-color: rgba(225,225,225, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0px -1px 5px black;
+  color: white;
+  border-bottom: none;
+  border-top: .05 solid gray ;
+  border-radius: 0 0 20px 5xp;
+}
+
+ul {
+  border-top: none ;
+  margin-top: 0;
+  background-color: rgba(225,225,225, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 1px 5px black;
+  list-style-type: none;
+  padding-inline-start: 0;
+  font-size: 28px;
+  border-radius: 0 0 5px 5px ;
+  position: absolute;
+  max-height: 253px;
+  overflow: hidden;
+}
+
+ul li {
+  color: aliceblue;
+  padding: 5px;
+  width: 442px;
+  text-align: left;
+}
+
+ul li:hover {
+  color: white;
+  background-color: rgba(225,225,225, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+}
